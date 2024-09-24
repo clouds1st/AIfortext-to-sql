@@ -33,3 +33,30 @@ return dat.ToString("yyyy-M-d").Replace("-","--");
 // This is how your code will be called.
 // You can edit this code to try different testing cases.
 string[] test_strs = new string[] {"Join", "these", "strings", "together"};
+************************************************************************************************************
+// C# code​​​​​​‌​‌‌‌‌​​‌‌​​​‌‌‌​​​​​‌‌​‌ below
+using System;
+
+// Write your answer here, and then test your code.
+
+public class Answer {
+
+    // Change these Boolean values to control whether you see 
+    // the expected result and/or hints.
+    public  static Boolean ShowExpectedResult = true;
+    public  static Boolean ShowHints = true;
+
+    public static int CalcHowManyDays(string date_str) {
+      //  Console.Write(date_str);
+        DateTime dt;
+        if(DateTime.TryParse(date_str,out dt))
+        {
+            DateTime dtret=DateTime.Parse(date_str);
+TimeSpan tmsp=DateTime.Now- dtret;
+return tmsp.Days;
+        }else
+        return 2147483647;
+    }
+
+}
+
