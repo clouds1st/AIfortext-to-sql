@@ -55,7 +55,7 @@ public class Answer {
 TimeSpan tmsp=DateTime.Now- dtret;
 return tmsp.Days;
         }else
-        return 2147483647;
+        return int.MaxValue;//2147483647;
     }
 
 }
